@@ -7,7 +7,7 @@
 body {
   font-family: Arial, sans-serif;
   line-height: 1.6;
-  background: linear-gradient(to bottom, #1b1b1b, #7f8c9c, #ffffff, #1c60c7);
+  background-color: #7f8c9c;
   color: #333;
   padding: 20px;
 }
@@ -51,7 +51,7 @@ header {
 }
 
 .center {
-  flex: 1 1 300px;
+  flex: 1 1 30px;
   min-width: 280px;
   display: flex;
   justify-content: center;
@@ -66,27 +66,80 @@ header {
   border-radius: 8px;
 }
 
-.more-info {
-  margin-top: 30px;
+.content img{
+
+  display: block;
+  max-width: 100%;
+  height: auto;
+  border: 2px solid #333;
+  border-radius: 8px;
+
+}
+
+.card img{
+
+  display: block;
+  max-width: 100%;
+  height: auto;
+  border: 2px solid #333;
+  border-radius: 8px;
+
+}
+
+.center-card {
+  background-color: white;
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  border: 1px solid #ddd;
   display: flex;
   flex-direction: column;
-  gap: 15px;
+  align-items: center;
+  text-align: center;
+  max-width: 400px;
+  margin: 20px auto;
 }
 
-.more-info p {
-  background-color: white;
-  padding: 15px;
-  border-radius: 12px;
-  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
-  border: 1px solid #ddd;
+.center-card img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 8px;
+  border: 2px solid #333;
 }
+
+.center-card p {
+  margin-top: 10px;
+  font-size: 16px;
+  color: #333;
+}
+
+.content {
+  display: flex;
+  justify-content: center; /* Centraliza os itens */
+  align-items: stretch; /* Faz todos os cards terem a mesma altura */
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.card, .center-card {
+  flex: 1; /* Faz todos os cards ocuparem espaço igual */
+  min-width: 280px;
+  max-width: 500px; /* Mantém um tamanho razoável para melhor alinhamento */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
 
 footer {
+  background-color: #165476; 
+  color: white;
   text-align: center;
-  padding: 15px;
-  color: #000000;
-  font-size: 14px;
+  padding: 20px;
+  font-size: 16px;
   width: 100%;
+  border-radius: 8px;
 }
 
 @media (max-width: 768px) {
