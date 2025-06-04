@@ -122,31 +122,68 @@
       border-radius: var(--border-radius);
     }
     
-    /* Responsividade */
+    @media (max-width: 1024px) {
+      :root {
+        --base-spacing: 18px;
+      }
+      
+      .content {
+        gap: 15px;
+      }
+    }
+    
     @media (max-width: 768px) {
-      header {
+      :root {
+        --base-spacing: 15px;
+      }
+      
+      body {
         padding: 15px;
       }
       
-      h1 {
-        font-size: 1.8rem;
+      header {
+        padding: 15px;
+        margin-bottom: 20px;
+      }
+      
+      .content {
+        grid-template-columns: 1fr;
+        margin: 20px 0;
+      }
+      
+      .center-card {
+        order: initial; /* Remove a ordem forçada em telas maiores */
       }
     }
     
     @media (max-width: 480px) {
+      :root {
+        --base-spacing: 12px;
+      }
+      
       body {
         padding: 10px;
       }
       
-      h1 {
-        font-size: 1.5rem;
+      header {
+        padding: 12px;
       }
       
-      .card {
-        padding: 15px;
+      .card, .center-card {
+        padding: 15px 12px;
       }
       
-      footer {
+      .card ul {
+        padding-left: 18px;
+      }
+    }
+    
+    @media (max-width: 360px) {
+      .card li {
+        font-size: 0.85rem;
+      }
+      
+      .center-card p {
         font-size: 0.9rem;
       }
     }
